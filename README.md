@@ -58,7 +58,7 @@ Example: ````python3 botx.py````
 
 --Output: HEADS
 
---Also supports the commans 'flip coin' and 'flip bitcoin'. However I do not recommend the last one due to its unstable nature.
+--Also supports the commands 'flip coin' and 'flip bitcoin'. However I do not recommend the last one due to its unstable nature.
 
 ````?google````
 
