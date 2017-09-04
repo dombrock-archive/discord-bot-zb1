@@ -22,17 +22,17 @@
 Example: ````python3 botx.py````
 
 ### Current Commands:
-?!bot:
+````?!bot````
 
 --Turns the bot on and off.
 
 
-?!mock:
+````?!mock````
 
 --Just don't.
 
 
-?add:
+````?add````
 
 --adds two numbers. 
 
@@ -41,7 +41,7 @@ Example: ````python3 botx.py````
 --Outputs: 3
 
 
-?choose:
+````?choose:````
 
 --Helps you make a choice. 
 
@@ -50,7 +50,7 @@ Example: ````python3 botx.py````
 --Output: Starctaft
 
 
-?flip:
+````?flip````
 
 --Flips coin.
 
@@ -60,54 +60,54 @@ Example: ````python3 botx.py````
 
 --Also supports the commans 'flip coin' and 'flip bitcoin'. However I do not recommend the last one due to its unstable nature.
 
-?google:
+````?google````
 
 --I'm feeling lucky
 
 
-?hello:
+````?hello````
 
 --Just says hello!
 
 
-?help:
+````?help````
 
 --Displays Help!
 
 
-?is X cool?:
+````?is X cool?````
 
 --X being any single word. Question mark is superficial.
 
 
-?purge_all!:
+````?purge_all!````
 
 --DELETES ALL THE MESSAGES IN THE CHAN. THIS ACTION CAN NOT BE STOPPED!!!
 
 
-?recall:
+````?recall````
 
 --recall a memory
 
 
-?remember:
+````?remember:````
 
 --Remember the following
 
 --Example: remember Dre sellout or greatest ever?
 
 
-?roll:
+````?roll````
 
 --Example: roll 1d3
 
 
-?test:
+````?test````
 
 --This is just a test, outputs the second argument.
 
 
-?wiki:
+````?wiki````
 
 --searches wikipedia
 
