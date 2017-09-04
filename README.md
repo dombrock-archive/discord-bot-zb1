@@ -41,7 +41,7 @@ Example: ````python3 botx.py````
 --Outputs: 3
 
 
-````?choose:````
+````?choose````
 
 --Helps you make a choice. 
 
@@ -90,7 +90,7 @@ Example: ````python3 botx.py````
 --recall a memory
 
 
-````?remember:````
+````?remember````
 
 --Remember the following
 
