@@ -13,7 +13,11 @@
 
 ### Usage:
 
--Just run the bot
+-Change the key in the last line 
+ 
+````client.run('test')````
+
+-Run the bot
 
 Example: ````python3 botx.py````
 
