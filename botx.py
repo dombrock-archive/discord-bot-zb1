@@ -1,9 +1,11 @@
 import discord
 import re
 import random
+import string
 import requests
 import json
 import pickle
+import requests
 
 client = discord.Client()
 
@@ -111,6 +113,11 @@ async def on_message(message):
         msgout = "Maybe... but {0.author.mention} is actually quite lame.".format(message)
         await client.send_message(message.channel, msgout)
 
+    help_list.append(["Hi zb1","Say hi."])
+    if ((bot_command+'hi') in msgin[0]):
+        msgout = "Hello {0.author.mention}!".format(message)
+        await client.send_message(message.channel, msgout)
+
     help_list.append(["flip","Flips a coin.\nExample: flip\nOutput: HEADS\nAlso supports the commans 'flip a coin' and 'flip a bitcoin'. However I do not recommend the last one due to its unstable nature."])
     if ((bot_command+'flip') in msgin[0]):
         if ('bitcoin' in msgin[1]):
@@ -140,6 +147,34 @@ async def on_message(message):
         msgout = tag+results
         await client.send_message(message.channel, msgout)
 
+
+    help_list.append(["bored","Just don't."])
+    if ((bot_command+'bored') in msgin[0]):
+        if len(msgin) > 1:
+            amt = msgin[1]
+        else:
+            amt = 1
+        for x in range(int(amt)):
+            key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
+            link = "https://imgur.com/"+key+".jpg"
+            try:
+                r = requests.get(link)
+                
+                while r.url == "https://i.imgur.com/removed.png":
+                    print("BAD LINK")
+                    key = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(5))
+                    link = "https://imgur.com/"+key+".jpg"
+                    r = requests.get(link)
+                    print(r.url)
+                    
+                # prints the int of the status code. Find more at httpstatusrappers.com :)
+            except requests.ConnectionError:
+                print("failed to connect")
+            
+            msgout = r.url
+            await client.send_message(message.channel, msgout)
+
+
     help_list.append(["!mock","Just don't."])
     if ((bot_command+'!mock') in msgin[0]):
         mock = not mock
@@ -148,9 +183,10 @@ async def on_message(message):
 
     help_list.append(["help","Displays Help!"])
     if ((bot_command+'help') in msgin[0]):
-        msgout = "YET ANOTHER DISCORD BOT v0.3\n--------\n"
+        msgout = "```\nYET ANOTHER DISCORD BOT v0.3\n--------\n"
         for x in sorted(help_list):
             msgout += bot_command+':\n'.join(x).replace("\n", "\n--")+"\n\n"
+        msgout += "\n```"
         await client.send_message(message.channel, msgout)
 
     if (mock == True):
@@ -170,5 +206,5 @@ async def on_ready():
 
 
 
-client.run('test')
+client.run('MzUwNTgyMjQyOTg2NDI2MzY4.DQOJng.1a3SbxWG15tA2clq0EQVYwS8bBY')
 
