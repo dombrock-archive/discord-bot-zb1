@@ -26,6 +26,9 @@ Example: ````python3 botx.py````
 
 --Turns the bot on and off.
 
+````?bored X````
+
+--Return a random image from imgur.com. If X is left blank X will be 1. WARNING: THIS COMMAND SHOULD BE ASSUMED TO BE NSFW
 
 ````?!mock````
 
