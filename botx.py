@@ -206,5 +206,5 @@ async def on_ready():
 
 
 
-client.run('MzUwNTgyMjQyOTg2NDI2MzY4.DQOJng.1a3SbxWG15tA2clq0EQVYwS8bBY')
+client.run('TOKEN')
 
